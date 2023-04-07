@@ -1,0 +1,68 @@
+<body class="body-edit">
+    <div>
+        <!-- Menu -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src='logo.png' widht=255 height=55 alt="Sistema de cadastro"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="http://localhost:8080/">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Usuario
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="http://localhost:8080/add-user">Cadastrar Usuário</a></li>
+                            <li><a class="dropdown-item" href="http://localhost:8080/list-user">Listar Usuário</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Próximo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link disabled">Opções</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                </div>
+            </div>
+        </nav>
+        <!-- Fim menu -->
+    </div>
+    <div class="container">
+        <h1 class="t-add-user text-center mt-3 mb-5">Editar Usuário!</h1>
+        
+        <!-- imprimir as mensagens que estao na sessao -->
+        {{>_msg}}        
+
+        <!-- Formulário cadastro usuario -->
+        <form action="/edit-user/{{user.id}}" method="POST">
+            <!-- Nome -->  
+            <div class="mb-3">
+                <label for="name" class="form-label text-success">Nome: </label>
+                <input type="text" name="name" class="form-control" id="name" aria-describedby="nome" value="{{user.name}}" required>
+                <div id="nome" class="form-text">Digite seu nome no campo acima</div>
+            </div>
+            <!-- Fim nome -->
+
+            <!-- Email -->
+            <div class="mb-3">
+                <label for="email" class="form-label text-success">Endereço de Email: </label>
+                <input type="email" name="email" class="form-control" id="email" aria-describedby="email" value="{{user.email}}" required>
+                <div id="email" class="form-text">Digite seu melhor e-mail no campo acima</div>
+            </div>
+            <!-- Fim email -->
+            <button class="btn btn-success" type="submit" class="btn btn-primary">Confimar</button>
+            <a class="btn btn-warning" href="list-banco">Cancelar</a>
+        </form>
+        <!-- Fim formulário cadastro usuario -->
+    </div>
+</body>
+

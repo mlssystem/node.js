@@ -1,0 +1,82 @@
+<body class="body-edit">
+    <div>
+        <!-- Menu -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src='logo.png' widht=255 height=55 alt="Sistema de cadastro"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="http://localhost:8080/">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Banco
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="http://localhost:8080/add-banco">Cadastrar Banco</a></li>
+                            <li><a class="dropdown-item" href="http://localhost:8080/list-banco">Listar Banco</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Próximo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Opções</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                </div>
+            </div>
+        </nav>
+        <!-- Fim menu -->
+    </div>
+    <div class="container">
+        <h1 class="text-center mt-3 mb-5">Editar Banco!</h1>
+
+        <!-- imprimir as mensagens que estao na sessao -->
+        {{>_msg}}
+
+        <!-- Formulario cadastrar banco -->
+        <form action="/edit-banco/{{banco.id}}" method="POST">
+            <div class="row">
+                <!-- Banco -->  
+                <div class="mb-3">
+                    <label for="banco" class="form-label">Código Banco: </label>
+                    <input type="number" name="banco" class="form-control" id="banco" value="{{banco.banco}}" placeholder="Digite o código do banco" aria-describedby="nome" required>
+                </div>
+                <!-- Fim banco -->
+
+                <!-- Nome -->  
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nome: </label>
+                    <input type="text" name="name" class="form-control" id="name" value="{{banco.name}}" placeholder="Comece a digitar" aria-describedby="nome" required>
+                </div>
+                <!-- Fim nome -->
+
+                <!-- Operador -->
+                <div class="col mb-3">
+                  <label for="operador" class="form-label">Código do Operador: </label>
+                  <input type="number" name="operador" class="form-control" id="operador" value="{{banco.operador}}" placeholder="Digite o código do operador se tiver">
+                </div>
+                <!-- Fim operador -->
+
+                <!-- Tipo de conta-->
+                <div class="col mb-3">
+                  <label for="tipo_conta_id" class="form-label">Tipo de conta: </label>
+                  <input type="number" name="tipo_conta_id" class="form-control" id="tipo_conta_id" value="{{banco.tipo_conta_id}}" placeholder="1 para corrente 2 para poupança" required>
+                </div>
+                <!-- Fim telefone -->
+            </div>
+            <button class="btn btn-success" type="submit">Confimar</button>
+            <a class="btn btn-warning" href="list-banco">Cancelar</a>
+        </form>
+        <!-- Fim formulario cadastrar banco -->
+    </div>
+</body>
+

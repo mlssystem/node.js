@@ -1,0 +1,96 @@
+<body class="body-add">
+    <div>
+        <!-- Menu -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src='logo.png' widht=255 height=55 alt="Sistema de cadastro"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="http://localhost:8080/">Home</a>
+                    </li>
+                    
+                    <!-- Banco -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Banco
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="http://localhost:8080/add-banco">Cadastrar Banco</a></li>
+                            <li><a class="dropdown-item" href="http://localhost:8080/list-banco">Listar Banco</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Próximo</a></li>
+                        </ul>
+                    </li>
+                    <!-- Fim Banco -->
+                    
+                    <!-- Opções -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            opções
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="http://localhost:8080/add-contato">Cadastrar Contato</a></li>
+                            <li><a class="dropdown-item" href="http://localhost:8080/add-user">Cadastrar Usuário</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item disabled" href="">Próximo</a></li>
+                        </ul>
+                    </li>
+                    <!-- Fim Opções -->
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                </div>
+            </div>
+        </nav>
+        <!-- Fim menu -->
+    </div>
+    <div class="container">
+        <h1 class="text-success text-center mt-3 mb-5">Cadastrar Banco!</h1>
+
+        <!-- imprimir as mensagens que estao na sessao -->
+        {{>_msg}}
+
+        <!-- Formulario cadastrar banco -->
+        <form action="add-banco" method="POST">
+            <div class="row">
+                <!-- Banco -->
+                <div class="col mb-3">
+                  <label for="banco" class="form-label text-success">Código do banco: </label>
+                  <input type="number" name="banco" class="form-control" id="banco" placeholder="Digite o número do banco" required>
+                </div>
+                <!-- Fim Banco -->
+
+                <!-- Nome -->  
+                <div class="mb-3">
+                    <label for="name" class="form-label text-success">Nome: </label>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Digite o nome do banco" aria-describedby="nome" required>
+                </div>
+                <!-- Fim nome -->
+
+                <!-- Operador -->
+                <div class="col mb-3">
+                  <label for="operador" class="form-label text-success">Operador do banco: </label>
+                  <input type="number" name="operador" class="form-control" id="operador" placeholder="Digite o número do operador se tiver" value="0">
+                </div>
+                <!-- Fim Operador -->
+
+                <!-- Tipo de Conta -->
+                <div class="col mb-3">
+                  <label for="tipo_conta_id" class="form-label text-success">Tipo de conta: </label>
+                  <input type="number" name="tipo_conta_id" class="form-control" id="tipo_conta_id" placeholder="1 para corrente 2 para poupança" required>
+                </div>
+                <!-- Fim Operador -->
+            </div>
+            <button class="btn btn-success" type="submit">Cadastrar</button>
+            <a class="btn btn-primary" href="list-banco">Listar Bancos</a>
+        </form>
+        <!-- Fim formulario cadastrar banco -->
+    </div>
+</body>
+

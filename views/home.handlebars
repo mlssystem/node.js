@@ -1,0 +1,296 @@
+<body class="body-home">
+    <div>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src='logo.png' widht=255 height=55></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="http://localhost:8080/">Home</a>
+                    </li>
+                    <!-- Banco -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Banco
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="http://localhost:8080/add-banco">Cadastrar Banco</a></li>
+                            <li><a class="dropdown-item" href="http://localhost:8080/list-banco">Listar Banco</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Próximo</a></li>
+                        </ul>
+                    </li>
+                    <!-- Fim Banco -->
+                    
+                    <!-- Contato -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Contato
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="http://localhost:8080/add-contato">Cadastrar Contato</a></li>
+                            <li><a class="dropdown-item" href="http://localhost:8080/list-contato">Listar Contato</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Próximo</a></li>
+                        </ul>
+                    </li>
+                    <!-- Fim Contato -->
+
+                    <!-- Usuário -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Usuario
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="http://localhost:8080/add-user">Cadastrar Usuário</a></li>
+                            <li><a class="dropdown-item" href="http://localhost:8080/list-user">Listar Usuário</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Próximo</a></li>
+                        </ul>
+                    </li>
+                    <!-- Fim Usuário -->
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Inativo" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Inativo</button>
+                </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <h1 class="text-white text-center t-add-home mt-3 mb-5">SISTEMA DE CADASTRO!</h1>
+    </div>
+
+    <div class="container text-center">
+        <!-- Display flex -->
+        <div class="d-flex flex-row justify-content-around align-content-around flex-wrap mt-3 mb-3">
+            <!-- Contato -->
+            <div class="p-2">
+                <div class="card" style="width: 16rem; mt-5">
+                    <img src="cadastrar.jpg" alt="Cadastrar contato">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">CONTATO</h5>
+                        <p class="card-text">Faça já seu cadastro para receber todoas as novidades.</p>
+                        <a href="http://localhost:8080/add-contato" class="btn btn-success">Cadastrar agora</a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-2">
+                <div class="card" style="width: 16rem; mt-5">
+                    <img src="visualizar.jpg" alt="Listar Contato contato">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">CONTATO</h5>
+                        <p class="card-text">Veja quem se cadastrou para receber todoas as novidades.</p>
+                        <a href="http://localhost:8080/list-contato" class="btn btn-primary">Listar Contato</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim contato -->
+            <!-- Usuário-->
+            <div class="p-2">
+                <div class="card" style="width: 16rem; mt-5">
+                    <img src="cadastrar.jpg" alt="Cadastrar usuário">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">USUÁRIO</h5>
+                        <p class="card-text">Faça já seu cadastro para receber todoas as novidades.</p>
+                        <a href="http://localhost:8080/add-user" class="btn btn-success">Cadastrar agora</a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-2">
+                <div class="card" style="width: 16rem; mt-5">
+                    <img src="visualizar.jpg" alt="Listar Contato usuário">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">USUÁRIO</h5>
+                        <p class="card-text">Veja quem se cadastrou para receber todoas as novidades.</p>
+                        <a href="http://localhost:8080/list-user" class="btn btn-primary">Listar Contato</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim usuário-->
+        </div>
+
+
+        <div class="container text-center">
+            <!-- Display flex -->
+            <div class="d-flex flex-row justify-content-around align-content-around flex-wrap mt-3 mb-3">        
+            <!-- Arquiwo -->
+            <div class="p-2">
+                <div class="card" style="width: 16rem; mt-5">
+                    <img src="cadastrar.jpg" alt="Cadastrar arquiwo">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">BANCO</h5>
+                        <p class="card-text">Faça já seu cadastro para receber todoas as novidades.</p>
+                        <a href="http://localhost:8080/add-banco" class="btn btn-success">Cadastrar agora</a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-2">
+                <div class="card" style="width: 16rem; mt-5">
+                    <img src="visualizar.jpg" alt="Listar Contato arquiwo">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">BANCO</h5>
+                        <p class="card-text">Veja quem se cadastrou para receber todoas as novidades.</p>
+                        <a href="http://localhost:8080/list-banco" class="btn btn-primary">Listar Contato</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim arquiwo -->
+            <!-- Arquiwo -->
+            <div class="p-2">
+                <div class="card" style="width: 16rem; mt-5">
+                    <img src="cadastrar.jpg" alt="Cadastrar arquiwo">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">CONTATO</h5>
+                        <p class="card-text">Faça já seu cadastro para receber todoas as novidades.</p>
+                        <a href="http://localhost:8080/add-arquiwo" class="btn btn-success">Cadastrar agora</a>
+                    </div>
+                </div>
+            </div>
+            <div class="p-2">
+                <div class="card" style="width: 16rem; mt-5">
+                    <img src="visualizar.jpg" alt="Listar Contato arquiwo">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">CONTATO</h5>
+                        <p class="card-text">Veja quem se cadastrou para receber todoas as novidades.</p>
+                        <a href="http://localhost:8080/list-arquiwo" class="btn btn-primary">Listar Contato</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim arquiwo -->
+        </div>
+
+
+
+
+        <!-- Fim display flex -->
+
+        <!-- Tabela -->
+        <!--<table class="table mt-5">
+          <thead class="table-light">
+            <tr>
+                <th>Primeiro</th>
+                <th>Segundo</th>
+                <th>Terceiro</th>
+                <th>Quarto</th>
+            </tr>        
+          </thead>
+          <tbody>
+              <tr>
+                <td>Um</td>
+                <td>Dois</td>
+                <td>Treis</td>
+                <td>Quarto</td>
+              </tr>
+          </tbody>
+        </table>-->
+        <!-- Fim tabela -->
+
+        <!-- Background -->
+        <div class="row mt-5 bg-info-subtle bg-gradient">
+            <!-- Background simples-->
+            <!--<div class="col mt-3">
+                <h4 class="text-center mt-2 mb-3">Background simples</h4>
+                <div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
+                <div class="p-3 mb-2 bg-primary-subtle text-emphasis-primary">.bg-primary-subtle</div>
+                <div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
+                <div class="p-3 mb-2 bg-secondary-subtle text-emphasis-secondary">.bg-secondary-subtle</div>
+                <div class="p-3 mb-2 bg-success text-white">.bg-success</div>
+                <div class="p-3 mb-2 bg-success-subtle text-emphasis-success">.bg-success-subtle</div>
+                <div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
+                <div class="p-3 mb-2 bg-danger-subtle text-emphasis-danger">.bg-danger-subtle</div>
+                <div class="p-3 mb-2 bg-warning text-dark">.bg-warning</div>
+                <div class="p-3 mb-2 bg-warning-subtle text-emphasis-warning">.bg-warning-subtle</div>
+                <div class="p-3 mb-2 bg-info text-dark">.bg-info</div>
+                <div class="p-3 mb-2 bg-info-subtle text-emphasis-info">.bg-info-subtle</div>
+                <div class="p-3 mb-2 bg-light text-dark">.bg-light</div>
+                <div class="p-3 mb-2 bg-light-subtle text-emphasis-light">.bg-light-subtle</div>
+                <div class="p-3 mb-2 bg-dark text-white">.bg-dark</div>
+                <div class="p-3 mb-2 bg-dark-subtle text-emphasis-dark">.bg-dark-subtle</div>
+                <p class="p-3 mb-2 bg-body-secondary">.bg-body-secondary</p>
+                <p class="p-3 mb-2 bg-body-tertiary">.bg-body-tertiary</p>
+
+                <div class="p-3 mb-2 bg-body text-body">.bg-body</div>
+                <div class="p-3 mb-2 bg-black text-white">.bg-black</div>
+                <div class="p-3 mb-2 bg-white text-dark">.bg-white</div>
+                <div class="p-3 mb-2 bg-transparent text-body">.bg-transparent</div>
+            </div>-->
+            <!-- Fim background simples-->
+
+            <!-- Background opacity e cores-->
+            <!--<div class="col mt-3">
+                <h4 class="text-center mt-2 mb-3">Background opacity e cores</h4>
+                <div class="bg-success p-2 text-white">This is default success background</div>
+                <div class="bg-success p-2 text-white bg-opacity-75">This is 75% opacity success background</div>
+                <div class="bg-success p-2 text-dark bg-opacity-50">This is 50% opacity success background</div>
+                <div class="bg-success p-2 text-dark bg-opacity-25">This is 25% opacity success background</div>
+                <div class="bg-success p-2 text-dark bg-opacity-10">This is 10% opacity success background</div>-->
+                <!-- Cores -->
+                <!--<h4 class="text-center mt-2 mb-3">Cores</h4>
+                <p class="text-primary">.text-primary</p>
+                <p class="text-primary-emphasis">.text-primary-emphasis</p>
+                <p class="text-secondary">.text-secondary</p>
+                <p class="text-secondary-emphasis">.text-secondary-emphasis</p>
+                <p class="text-success">.text-success</p>
+                <p class="text-success-emphasis">.text-success-emphasis</p>
+                <p class="text-danger">.text-danger</p>
+                <p class="text-danger-emphasis">.text-danger-emphasis</p>
+                <p class="text-warning bg-dark">.text-warning</p>
+                <p class="text-warning-emphasis">.text-warning-emphasis</p>
+                <p class="text-info bg-dark">.text-info</p>
+                <p class="text-info-emphasis">.text-info-emphasis</p>
+                <p class="text-light bg-dark">.text-light</p>
+                <p class="text-light-emphasis">.text-light-emphasis</p>
+                <p class="text-dark bg-white">.text-dark</p>
+                <p class="text-dark-emphasis">.text-dark-emphasis</p>
+                <p class="text-body">.text-body</p>
+                <p class="text-muted">.text-muted</p>
+
+                <p class="text-body-emphasis">.text-body-emphasis</p>
+                <p class="text-body-secondary">.text-body-secondary</p>
+                <p class="text-body-tertiary">.text-body-tertiary</p>
+
+                <p class="text-black bg-white">.text-black</p>
+                <p class="text-white bg-dark">.text-white</p>
+                <p class="text-black-50 bg-white">.text-black-50</p>
+                <p class="text-white-50 bg-dark">.text-white-50</p>
+            </div>-->
+            <!-- Fim background opacity e cores-->
+
+            <!-- Background gradiente-->
+            <!--<div class="col mt-3">
+                <h4 class="text-center mt-2 mb-3">Background gradient</h4>
+                <div class="p-3 mb-2 bg-primary bg-gradient text-white">.bg-primary.bg-gradient</div>
+                <div class="p-3 mb-2 bg-primary-subtle bg-gradient text-emphasis-primary">.bg-primary-subtle.bg-gradient</div>
+                <div class="p-3 mb-2 bg-secondary bg-gradient text-white">.bg-secondary.bg-gradient</div>
+                <div class="p-3 mb-2 bg-secondary-subtle bg-gradient text-emphasis-secondary">.bg-secondary-subtle.bg-gradient</div>
+                <div class="p-3 mb-2 bg-success bg-gradient text-white">.bg-success.bg-gradient</div>
+                <div class="p-3 mb-2 bg-success-subtle bg-gradient text-emphasis-success">.bg-success-subtle.bg-gradient</div>
+                <div class="p-3 mb-2 bg-danger bg-gradient text-white">.bg-danger.bg-gradient</div>
+                <div class="p-3 mb-2 bg-danger-subtle bg-gradient text-emphasis-danger">.bg-danger-subtle.bg-gradient</div>
+                <div class="p-3 mb-2 bg-warning bg-gradient text-dark">.bg-warning.bg-gradient</div>
+                <div class="p-3 mb-2 bg-warning-subtle bg-gradient text-emphasis-warning">.bg-warning-subtle.bg-gradient</div>
+                <div class="p-3 mb-2 bg-info bg-gradient text-dark">.bg-info.bg-gradient</div>
+                <div class="p-3 mb-2 bg-info-subtle bg-gradient text-emphasis-info">.bg-info-subtle.bg-gradient</div>
+                <div class="p-3 mb-2 bg-light bg-gradient text-dark">.bg-light.bg-gradient</div>
+                <div class="p-3 mb-2 bg-light-subtle bg-gradient text-emphasis-light">.bg-light-subtle.bg-gradient</div>
+                <div class="p-3 mb-2 bg-dark bg-gradient text-white">.bg-dark.bg-gradient</div>
+                <div class="p-3 mb-2 bg-dark-subtle bg-gradient text-emphasis-dark">.bg-dark-subtle.bg-gradient</div>
+                <p class="p-3 mb-2 bg-body-secondary bg-gradient">.bg-body-secondary</p>
+                <p class="p-3 mb-2 bg-body-tertiary bg-gradient">.bg-body-tertiary</p>
+
+                <div class="p-3 mb-2 bg-body bg-gradient text-body">.bg-body.bg-gradient</div>
+                <div class="p-3 mb-2 bg-black bg-gradient text-white">.bg-black.bg-gradient</div>
+                <div class="p-3 mb-2 bg-white bg-gradient text-dark">.bg-white.bg-gradient</div>
+                <div class="p-3 mb-2 bg-transparent bg-gradient text-body">.bg-transparent.bg-gradient</div>
+            </div>-->
+            <!-- Fim background gradiente-->
+        </div>
+        <!-- Fim gackground -->
+    </div>
+</body>
+</html>

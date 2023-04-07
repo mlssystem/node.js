@@ -1,0 +1,65 @@
+<body class="body-view">
+    <div>
+        <!-- Menu -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src='logo.png' widht=255 height=55 alt="Sistema de cadastro"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="http://localhost:8080/">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Contato
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="http://localhost:8080/add-contato">Cadastrar Contato</a></li>
+                            <li><a class="dropdown-item active" href="http://localhost:8080/list-contato">Listar Contato</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Próximo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link disabled">Opções</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                </div>
+            </div>
+        </nav>
+        <!-- Fim menu -->
+    </div>
+    <div class="text-white container">
+        <h1 class="t-list-cont text-center mt-3 mb-5">Visualizar e Gerenciar Contato!</h1>
+
+        <!-- imprimir as mensagens que estao na sessao -->
+        {{>_msg}}
+
+        <!-- {{log contato}} -->
+
+        <!-- Formulário cadastro usuario -->
+        <span class="list-db">ID:</span>  {{contato.id}} <br>
+        <span class="list-db">Nome:</span>  {{contato.name}} <br>
+        <span class="list-db">E-mail:</span>  {{contato.email}} <br>
+        <span class="list-db">Telefone:</span>  {{contato.phone}} <br>
+        <span class="list-db">Descrição:</span>  {{contato.descricao}} <br>
+        <span class="list-db">Cadastrado:</span>  {{#formatDate contato.createdAt}}{{/formatDate}} <br>
+        <span class="list-db">Modificado:</span>  {{#formatDateTime contato.updateAt}}{{/formatDateTime}} <br>
+        <a class="btn btn-danger pl-2 pr-2 pb-1 pt-1 mt-1 mb-2" href="/del-contato/{{contato.id}}" onclick="return confirm('Tem certeza que deseja excluir o id: {{contato.id}} - {{contato.name}}?')">Apagar</a>
+
+        <a class="btn btn-warning pl-2 pr-2 pb-1 pt-1 mt-1 mb-2" href="/edit-contato/{{contato.id}}">Editar</a>
+
+        <!--<a class="btn btn-success pl-2 pr-2 pb-1 pt-1 mt-1 mb-2" href="/add-contato">Cadastrar</a>-->
+
+        <a class="btn btn-primary pl-2 pr-2 pb-1 pt-1 mt-1 mb-2" href="/list-contato">Listar</a>
+        <hr>
+        <!-- Fim formulário cadastro usuario -->
+    </div>
+</body>
